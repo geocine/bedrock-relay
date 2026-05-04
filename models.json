@@ -1,0 +1,32 @@
+{
+  "models": [
+    {
+      "alias": "claude-sonnet-4-6",
+      "id": "us.anthropic.claude-sonnet-4-6"
+    },
+    {
+      "alias": "claude-sonnet-4-6[1m]",
+      "id": "us.anthropic.claude-sonnet-4-6[1m]"
+    },
+    {
+      "alias": "claude-opus-4-7",
+      "id": "us.anthropic.claude-opus-4-7"
+    },
+    {
+      "alias": "claude-opus-4-7[1m]",
+      "id": "us.anthropic.claude-opus-4-7[1m]"
+    },
+    {
+      "alias": "claude-opus-4-6",
+      "id": "us.anthropic.claude-opus-4-6-v1"
+    },
+    {
+      "alias": "claude-opus-4-6-v1[1m]",
+      "id": "us.anthropic.claude-opus-4-6-v1[1m]"
+    },
+    {
+      "alias": "claude-haiku-4-5",
+      "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+    }
+  ]
+}
