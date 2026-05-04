@@ -2,6 +2,8 @@
 
 Local Go proxy for Anthropic-compatible and OpenAI-compatible chat APIs backed by Amazon Bedrock Claude native invocation.
 
+<img width="1323" height="706" alt="bedrock" src="https://github.com/user-attachments/assets/114ebdf9-4ce9-43ba-978a-2b74b7bbb38e" />
+
 ## Quick start
 
 ```bash
