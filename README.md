@@ -74,7 +74,7 @@ The relay does not require or validate API keys. If a client demands one, any pl
 
 ### Codex
 
-Add the following to `~/.codex/config.toml`:
+Add the provider once in `~/.codex/config.toml`:
 
 ```toml
 [model_providers.bedrock_relay]
@@ -82,8 +82,14 @@ name = "AWS Bedrock Relay"
 base_url = "http://127.0.0.1:18456/v1"
 wire_api = "responses"
 stream_idle_timeout_ms = 10000000
+```
 
-[profiles.bedrock]
+Create a separate profile file at `~/.codex/bedrock.config.toml`. Put profile
+settings at the top level of that file; do not nest them under
+`[profiles.bedrock]`.
+
+```toml
+# ~/.codex/bedrock.config.toml
 model = "claude-opus-4-6"
 model_provider = "bedrock_relay"
 web_search = "disabled"
@@ -91,7 +97,13 @@ model_catalog_json = "/path/to/bedrock-relay/model_catalog.json"
 model_reasoning_effort = "medium"
 ```
 
-Set `model_catalog_json` to the absolute path of `model_catalog.json` in this repository.
+Set `model_catalog_json` to the absolute path of the checked-in
+`model_catalog.json` example. The catalog is for Codex model metadata only; the
+relay's Bedrock aliases still come from `models.json`.
+
+For current Codex builds, `apply_patch_tool_type` in the catalog must be
+`"freeform"` when enabled. Older `"function"` values will fail configuration
+loading with an unknown-variant error.
 
 Then start Codex with the Bedrock profile:
 
